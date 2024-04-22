@@ -31,11 +31,27 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
          break;
       default:
          cout << "Invalid option. Please try again." << endl;
-   
 }
 
 int main() {
-   /* Type your code here */
+   string customerName, todayDate;
+   cout << "Enter customer's name:" << endl;
+   getline(cin, customerName);
+   cout << "Enter today's date:" << endl;
+   getline(cin, todayDate);
+
+   cout << endl << "Customer name: " << customerName << endl;
+   cout << "Today's date: " << todayDate << endl;
+
+   ShoppingCart cart;
+
+   char choice;
+    do {
+        PrintMenu();
+        cout << "Enter your choice: ";
+        cin >> choice;
+        ExecuteMenu(choice, cart);
+    } while (choice != 'q');
    
    return 0;
 }
