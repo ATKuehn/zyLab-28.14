@@ -68,7 +68,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
   if (!found) {
     cout << "Item not found in cart. Nothing modified." << endl;
   }
-return;
+  return;
 }
 
 int ShoppingCart::GetNumItemsInCart() const {
@@ -76,7 +76,7 @@ int ShoppingCart::GetNumItemsInCart() const {
   for (int i = 0; i < cartItems.size(); ++i) {
     sum += cartItems.at(i).GetQuantity();
   }
-return sum;
+  return sum;
 }
 int ShoppingCart::GetCostOfCart() const {
   int sum = 0;
@@ -87,7 +87,7 @@ int ShoppingCart::GetCostOfCart() const {
     quantity = cartItems.at(i).GetQuantity();
     sum += (price * quantity);
   }
-return sum;
+  return sum;
 }
 
 void ShoppingCart::PrintTotal() const {
@@ -111,7 +111,7 @@ void ShoppingCart::PrintTotal() const {
       }
   }
   cout << endl << "Total: $" << total << endl;
-return;
+  return;
 }
 void ShoppingCart::PrintDescriptions() const {
   cout << customerName << "'s Shopping Cart - " << currentDate << endl << endl;
@@ -119,7 +119,7 @@ void ShoppingCart::PrintDescriptions() const {
   for (int i = 0; i < cartItems.size(); ++i) {
     cout << cartItems.at(i).GetName() << ": " << cartItems.at(i).GetDescription() << endl;
 }
-return;
+  return;
 }
 
 
